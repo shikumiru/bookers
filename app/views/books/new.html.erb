@@ -1,2 +1,10 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<h2>テスト投稿ページ</h2>
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+  <div>Title</div>
+  <%= f.text_field :title %>
+
+  <div>Body</div>
+  <%= f.text_area :body %>
+
+  <div><%= f.submit 'Create Book' %></div>
+<% end %>
